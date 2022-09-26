@@ -13,12 +13,12 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Ristorante
 {
-    public partial class FormMain : Form
+    public partial class FormPrenota : Form
     {
         public SqlConnection conn;
         public SqlCommand cmd;
 
-        public FormMain()
+        public FormPrenota()
         {
             InitializeComponent();
             this.turniTableAdapter = new RistoranteDataSetTableAdapters.TurniTableAdapter();
@@ -65,23 +65,8 @@ namespace Ristorante
         private void btnMy_Click(object sender, EventArgs e)
         {
             // da fare
-            Form3 formMy = new Form3();
+            FormMy formMy = new FormMy();
             formMy.ShowDialog();
-        }
-
-        private void labelPrenota_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ristoranteDataSetBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePickerGiorno_ValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

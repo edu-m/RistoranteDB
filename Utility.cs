@@ -9,7 +9,7 @@ namespace Ristorante
 {
     public class Utility
     {
-        public static string connString = "Data Source=PC-ILA\\SQLEXPRESS;Initial Catalog=Ristorante;Integrated Security=True";
+        public static string connString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=Ristorante;Integrated Security=True";
         public static string loggedUser = "-1";
   
         

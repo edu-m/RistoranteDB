@@ -5,18 +5,20 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
 
 namespace Ristorante
 {
-    public partial class Form_Benvenuti : Form
+    public partial class FormLogin : Form
     {
         public SqlConnection conn;
         public SqlCommand cmd;
 
-        public Form_Benvenuti()
+        public FormLogin()
         {
             InitializeComponent();
 
@@ -35,7 +37,7 @@ namespace Ristorante
             conn.Open();
             string queryString = "SELECT ID FROM dbo.Clienti "
                             + "WHERE email = '" + textBoxEmail.Text
-                            + "' and pwd = '" + textBoxPwd.Text + "'";
+                            + "' and pwd = '" + GetSha1(textBoxPwd.Text) + "'";
             SqlDataAdapter adapter = new SqlDataAdapter(queryString, conn);
             DataSet clienti = new DataSet();
             adapter.Fill(clienti, "Clienti");
@@ -48,8 +50,7 @@ namespace Ristorante
                 Utility.loggedUser = pRow["ID"].ToString();
 
                 //MessageBox.Show("IdCliente = " + Utility.loggedUser);
-
-                FormMain formPrenota = new FormMain();
+                FormPrenota formPrenota = new FormPrenota();
                 formPrenota.ShowDialog();
                 this.Close();
 
@@ -61,17 +62,72 @@ namespace Ristorante
 
         private void btnRegistrati_Click(object sender, EventArgs e)
         {
-            // da fare
+            this.labelNome.Visible = true;
+            this.textBoxNome.Visible = true;
+            this.labelTelefono.Visible = true;
+            this.textBoxTel.Visible = true;
+            this.btnInvia.Visible = true;
+            this.btnRegistrati.Enabled = false;
+            this.btnAccedi.Enabled = false;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        public static string GetSha1(string value)
         {
-
+            var data = Encoding.ASCII.GetBytes(value);
+            var hashData = new SHA1Managed().ComputeHash(data);
+            var hash = string.Empty;
+            foreach (var b in hashData)
+            {
+                hash += b.ToString("X2");
+            }
+            return hash;
         }
 
-        private void textBoxEmail_TextChanged(object sender, EventArgs e)
+        private void btnInvia_Click(object sender, EventArgs e)
         {
+            if (textBoxEmail.Text.Trim().Equals(String.Empty)
+                || textBoxPwd.Text.Trim().Equals(String.Empty))
+                MessageBox.Show("I campi Email e Password sono obbligatori");
+            else
+            { 
+                cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "PR_CREA_UTENTE";
+                cmd.Connection = conn;
 
+                cmd.Parameters.AddWithValue("@email", this.textBoxEmail.Text.Trim());
+                cmd.Parameters.AddWithValue("@pwd", GetSha1(this.textBoxPwd.Text.Trim()));
+                cmd.Parameters.AddWithValue("@nome", this.textBoxNome.Text.Trim());
+                cmd.Parameters.AddWithValue("@telefono", this.textBoxTel.Text.Trim());
+                cmd.Parameters.Add("@message", SqlDbType.VarChar, 100);
+                cmd.Parameters["@message"].Direction = ParameterDirection.Output;
+
+                try
+                {
+                    conn.Open();
+                    // code here  
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("C'è stato un problema nella comunicazione con il server. Riprova più tardi. Codice di errore"+ ex.ToString());
+                    this.Close();
+                }
+                
+                cmd.ExecuteNonQuery();
+                conn.Close(); ;
+
+                string result = cmd.Parameters["@message"].Value.ToString();
+                MessageBox.Show(result);
+
+                this.labelNome.Visible = false;
+                this.textBoxNome.Visible = false;
+                this.labelTelefono.Visible = false;
+                this.textBoxTel.Visible = false;
+                this.btnInvia.Visible = false;
+                this.btnRegistrati.Enabled = true;
+                this.btnAccedi.Enabled = true;
+            }
         }
+
     }
 }

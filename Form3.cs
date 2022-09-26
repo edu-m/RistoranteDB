@@ -10,17 +10,24 @@ using System.Windows.Forms;
 
 namespace Ristorante
 {
-    public partial class Form3 : Form
+    public partial class FormMy : Form
     {
-        public Form3()
+        public FormMy()
         {
             InitializeComponent();
         }
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            // TODO: questa riga di codice carica i dati nella tabella 'ristoranteDataSet.Prenotazioni'. È possibile spostarla o rimuoverla se necessario.
-            this.prenotazioniTableAdapter.Fill(this.ristoranteDataSet.Prenotazioni);
+            // TODO: questa riga di codice carica i dati nella tabella 'ristoranteDataSet.PrenotazClienteDataTable'. È possibile spostarla o rimuoverla se necessario.
+            this.prenotazClienteDataTableTableAdapter.Fill(this.ristoranteDataSet.PrenotazClienteDataTable);
+            this.prenotazClienteDataTableTableAdapter.FillBy(this.ristoranteDataSet.PrenotazClienteDataTable, 
+                new System.Nullable<int>(((int)(System.Convert.ChangeType(Utility.loggedUser, typeof(int))))));
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 
@@ -28,17 +35,11 @@ namespace Ristorante
         {
             try
             {
-                this.prenotazioniTableAdapter.FillBy(this.ristoranteDataSet.Prenotazioni, new System.Nullable<int>(((int)(System.Convert.ChangeType(loggedUserToolStripTextBox.Text, typeof(int))))));
-            }
+             }
             catch (System.Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
         }
     }

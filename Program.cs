@@ -17,7 +17,7 @@ namespace Ristorante
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_Benvenuti());
+            Application.Run(new FormLogin());
         }
     }
 

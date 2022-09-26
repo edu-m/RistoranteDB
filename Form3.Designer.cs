@@ -1,6 +1,6 @@
 ﻿namespace Ristorante
 {
-    partial class Form3
+    partial class FormMy
     {
         /// <summary>
         /// Required designer variable.
@@ -29,24 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMy));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giornoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.turnoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Giorno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Orario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Posti = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Note = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prenotazioniBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.prenotazClienteDataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ristoranteDataSet = new Ristorante.RistoranteDataSet();
+            this.prenotazioniBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
-            this.loggedUserToolStripLabel = new System.Windows.Forms.ToolStripLabel();
-            this.loggedUserToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.prenotazioniTableAdapter = new Ristorante.RistoranteDataSetTableAdapters.PrenotazioniTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
+            this.prenotazClienteDataTableTableAdapter = new Ristorante.RistoranteDataSetTableAdapters.PrenotazClienteDataTableTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prenotazioniBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prenotazClienteDataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ristoranteDataSet)).BeginInit();
-            this.fillByToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.prenotazioniBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -56,21 +57,23 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkMagenta;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
-            this.giornoDataGridViewTextBoxColumn,
-            this.turnoDataGridViewTextBoxColumn,
-            this.idClienteDataGridViewTextBoxColumn,
-            this.paxDataGridViewTextBoxColumn,
-            this.noteDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.prenotazioniBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 105);
+            this.Giorno,
+            this.Orario,
+            this.Posti,
+            this.Note,
+            this.idClienteDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.prenotazClienteDataTableBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(30, 145);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(748, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(506, 166);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -81,25 +84,44 @@
             this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
             this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.Width = 62;
+            this.iDDataGridViewTextBoxColumn.Visible = false;
+            this.iDDataGridViewTextBoxColumn.Width = 49;
             // 
-            // giornoDataGridViewTextBoxColumn
+            // Giorno
             // 
-            this.giornoDataGridViewTextBoxColumn.DataPropertyName = "giorno";
-            this.giornoDataGridViewTextBoxColumn.HeaderText = "giorno";
-            this.giornoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.giornoDataGridViewTextBoxColumn.Name = "giornoDataGridViewTextBoxColumn";
-            this.giornoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.giornoDataGridViewTextBoxColumn.Width = 89;
+            this.Giorno.DataPropertyName = "Giorno";
+            this.Giorno.HeaderText = "Giorno";
+            this.Giorno.MinimumWidth = 6;
+            this.Giorno.Name = "Giorno";
+            this.Giorno.ReadOnly = true;
+            this.Giorno.Width = 76;
             // 
-            // turnoDataGridViewTextBoxColumn
+            // Orario
             // 
-            this.turnoDataGridViewTextBoxColumn.DataPropertyName = "turno";
-            this.turnoDataGridViewTextBoxColumn.HeaderText = "turno";
-            this.turnoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.turnoDataGridViewTextBoxColumn.Name = "turnoDataGridViewTextBoxColumn";
-            this.turnoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.turnoDataGridViewTextBoxColumn.Width = 82;
+            this.Orario.DataPropertyName = "Orario";
+            this.Orario.HeaderText = "Orario";
+            this.Orario.MinimumWidth = 6;
+            this.Orario.Name = "Orario";
+            this.Orario.ReadOnly = true;
+            this.Orario.Width = 73;
+            // 
+            // Posti
+            // 
+            this.Posti.DataPropertyName = "Posti";
+            this.Posti.HeaderText = "Posti";
+            this.Posti.MinimumWidth = 6;
+            this.Posti.Name = "Posti";
+            this.Posti.ReadOnly = true;
+            this.Posti.Width = 66;
+            // 
+            // Note
+            // 
+            this.Note.DataPropertyName = "Note";
+            this.Note.HeaderText = "Note";
+            this.Note.MinimumWidth = 6;
+            this.Note.Name = "Note";
+            this.Note.ReadOnly = true;
+            this.Note.Width = 65;
             // 
             // idClienteDataGridViewTextBoxColumn
             // 
@@ -108,88 +130,70 @@
             this.idClienteDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
             this.idClienteDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idClienteDataGridViewTextBoxColumn.Width = 108;
+            this.idClienteDataGridViewTextBoxColumn.Visible = false;
+            this.idClienteDataGridViewTextBoxColumn.Width = 88;
             // 
-            // paxDataGridViewTextBoxColumn
+            // prenotazClienteDataTableBindingSource
             // 
-            this.paxDataGridViewTextBoxColumn.DataPropertyName = "pax";
-            this.paxDataGridViewTextBoxColumn.HeaderText = "pax";
-            this.paxDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.paxDataGridViewTextBoxColumn.Name = "paxDataGridViewTextBoxColumn";
-            this.paxDataGridViewTextBoxColumn.ReadOnly = true;
-            this.paxDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // noteDataGridViewTextBoxColumn
-            // 
-            this.noteDataGridViewTextBoxColumn.DataPropertyName = "note";
-            this.noteDataGridViewTextBoxColumn.HeaderText = "note";
-            this.noteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
-            this.noteDataGridViewTextBoxColumn.ReadOnly = true;
-            this.noteDataGridViewTextBoxColumn.Width = 77;
-            // 
-            // prenotazioniBindingSource
-            // 
-            this.prenotazioniBindingSource.DataMember = "Prenotazioni";
-            this.prenotazioniBindingSource.DataSource = this.ristoranteDataSet;
+            this.prenotazClienteDataTableBindingSource.DataMember = "PrenotazClienteDataTable";
+            this.prenotazClienteDataTableBindingSource.DataSource = this.ristoranteDataSet;
             // 
             // ristoranteDataSet
             // 
             this.ristoranteDataSet.DataSetName = "RistoranteDataSet";
             this.ristoranteDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // prenotazioniBindingSource
+            // 
+            this.prenotazioniBindingSource.DataMember = "Prenotazioni";
+            this.prenotazioniBindingSource.DataSource = this.ristoranteDataSet;
+            // 
             // fillByToolStrip
             // 
             this.fillByToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loggedUserToolStripLabel,
-            this.loggedUserToolStripTextBox,
-            this.fillByToolStripButton});
             this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
             this.fillByToolStrip.Name = "fillByToolStrip";
-            this.fillByToolStrip.Size = new System.Drawing.Size(800, 34);
+            this.fillByToolStrip.Size = new System.Drawing.Size(635, 25);
             this.fillByToolStrip.TabIndex = 1;
             this.fillByToolStrip.Text = "fillByToolStrip";
-            // 
-            // loggedUserToolStripLabel
-            // 
-            this.loggedUserToolStripLabel.Name = "loggedUserToolStripLabel";
-            this.loggedUserToolStripLabel.Size = new System.Drawing.Size(108, 29);
-            this.loggedUserToolStripLabel.Text = "loggedUser:";
-            // 
-            // loggedUserToolStripTextBox
-            // 
-            this.loggedUserToolStripTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.loggedUserToolStripTextBox.Name = "loggedUserToolStripTextBox";
-            this.loggedUserToolStripTextBox.Size = new System.Drawing.Size(100, 34);
-            // 
-            // fillByToolStripButton
-            // 
-            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillByToolStripButton.Name = "fillByToolStripButton";
-            this.fillByToolStripButton.Size = new System.Drawing.Size(56, 29);
-            this.fillByToolStripButton.Text = "FillBy";
-            this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
             // 
             // prenotazioniTableAdapter
             // 
             this.prenotazioniTableAdapter.ClearBeforeFill = true;
             // 
-            // Form3
+            // label1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(20, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(426, 57);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Le tue prenotazioni";
+            // 
+            // prenotazClienteDataTableTableAdapter
+            // 
+            this.prenotazClienteDataTableTableAdapter.ClearBeforeFill = true;
+            // 
+            // FormMy
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Thistle;
+            this.ClientSize = new System.Drawing.Size(635, 422);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form3";
-            this.Text = "Form3";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "FormMy";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Le tue prenotazioni";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prenotazioniBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prenotazClienteDataTableBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ristoranteDataSet)).EndInit();
-            this.fillByToolStrip.ResumeLayout(false);
-            this.fillByToolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.prenotazioniBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,15 +205,15 @@
         private RistoranteDataSet ristoranteDataSet;
         private System.Windows.Forms.BindingSource prenotazioniBindingSource;
         private RistoranteDataSetTableAdapters.PrenotazioniTableAdapter prenotazioniTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn giornoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn turnoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idClienteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn paxDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn;
         private System.Windows.Forms.ToolStrip fillByToolStrip;
-        private System.Windows.Forms.ToolStripLabel loggedUserToolStripLabel;
-        private System.Windows.Forms.ToolStripTextBox loggedUserToolStripTextBox;
-        private System.Windows.Forms.ToolStripButton fillByToolStripButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource prenotazClienteDataTableBindingSource;
+        private RistoranteDataSetTableAdapters.PrenotazClienteDataTableTableAdapter prenotazClienteDataTableTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Giorno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Orario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Posti;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Note;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idClienteDataGridViewTextBoxColumn;
     }
 }

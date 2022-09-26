@@ -8,11 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Ristorante</RootNamespace>
     <AssemblyName>Ristorante</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -86,6 +85,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RistDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RistDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RistoranteDataSet.cs">
+      <DependentUpon>RistoranteDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="RistoranteDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -111,7 +118,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\FormMain.datasource" />
     <None Include="Properties\DataSources\Form_Benvenuti.datasource" />
     <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\DataSources\Ristorante.Properties.Resources.datasource" />
@@ -126,6 +132,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="RistDataSet.xsc">
+      <DependentUpon>RistDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RistDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RistDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RistDataSet.xss">
+      <DependentUpon>RistDataSet.xsd</DependentUpon>
+    </None>
     <None Include="RistoranteDataSet.xsc">
       <DependentUpon>RistoranteDataSet.xsd</DependentUpon>
     </None>

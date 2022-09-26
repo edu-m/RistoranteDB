@@ -57,7 +57,7 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkMagenta;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
@@ -67,13 +67,13 @@
             this.Note,
             this.idClienteDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.prenotazClienteDataTableBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 145);
+            this.dataGridView1.Location = new System.Drawing.Point(77, 123);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(506, 166);
+            this.dataGridView1.Size = new System.Drawing.Size(577, 297);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -94,7 +94,7 @@
             this.Giorno.MinimumWidth = 6;
             this.Giorno.Name = "Giorno";
             this.Giorno.ReadOnly = true;
-            this.Giorno.Width = 76;
+            this.Giorno.Width = 93;
             // 
             // Orario
             // 
@@ -103,7 +103,7 @@
             this.Orario.MinimumWidth = 6;
             this.Orario.Name = "Orario";
             this.Orario.ReadOnly = true;
-            this.Orario.Width = 73;
+            this.Orario.Width = 88;
             // 
             // Posti
             // 
@@ -112,7 +112,7 @@
             this.Posti.MinimumWidth = 6;
             this.Posti.Name = "Posti";
             this.Posti.ReadOnly = true;
-            this.Posti.Width = 66;
+            this.Posti.Width = 80;
             // 
             // Note
             // 
@@ -121,7 +121,7 @@
             this.Note.MinimumWidth = 6;
             this.Note.Name = "Note";
             this.Note.ReadOnly = true;
-            this.Note.Width = 65;
+            this.Note.Width = 79;
             // 
             // idClienteDataGridViewTextBoxColumn
             // 
@@ -153,7 +153,7 @@
             this.fillByToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
             this.fillByToolStrip.Name = "fillByToolStrip";
-            this.fillByToolStrip.Size = new System.Drawing.Size(635, 25);
+            this.fillByToolStrip.Size = new System.Drawing.Size(714, 25);
             this.fillByToolStrip.TabIndex = 1;
             this.fillByToolStrip.Text = "fillByToolStrip";
             // 
@@ -164,10 +164,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 43);
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(65, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(426, 57);
+            this.label1.Size = new System.Drawing.Size(589, 70);
             this.label1.TabIndex = 2;
             this.label1.Text = "Le tue prenotazioni";
             // 
@@ -177,15 +177,18 @@
             // 
             // FormMy
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Thistle;
-            this.ClientSize = new System.Drawing.Size(635, 422);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(714, 513);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormMy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Le tue prenotazioni";

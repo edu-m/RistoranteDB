@@ -55,10 +55,10 @@
             // dateTimePickerGiorno
             // 
             this.dateTimePickerGiorno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerGiorno.Location = new System.Drawing.Point(168, 127);
+            this.dateTimePickerGiorno.Location = new System.Drawing.Point(189, 159);
             this.dateTimePickerGiorno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerGiorno.Name = "dateTimePickerGiorno";
-            this.dateTimePickerGiorno.Size = new System.Drawing.Size(340, 30);
+            this.dateTimePickerGiorno.Size = new System.Drawing.Size(382, 35);
             this.dateTimePickerGiorno.TabIndex = 1;
             // 
             // comboBoxTurno
@@ -67,10 +67,10 @@
             this.comboBoxTurno.DisplayMember = "valore";
             this.comboBoxTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTurno.FormattingEnabled = true;
-            this.comboBoxTurno.Location = new System.Drawing.Point(168, 177);
+            this.comboBoxTurno.Location = new System.Drawing.Point(189, 221);
             this.comboBoxTurno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxTurno.Name = "comboBoxTurno";
-            this.comboBoxTurno.Size = new System.Drawing.Size(340, 33);
+            this.comboBoxTurno.Size = new System.Drawing.Size(382, 37);
             this.comboBoxTurno.TabIndex = 2;
             this.comboBoxTurno.ValueMember = "ID";
             // 
@@ -92,10 +92,10 @@
             // buttonPrenota
             // 
             this.buttonPrenota.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrenota.Location = new System.Drawing.Point(62, 409);
+            this.buttonPrenota.Location = new System.Drawing.Point(839, 159);
             this.buttonPrenota.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPrenota.Name = "buttonPrenota";
-            this.buttonPrenota.Size = new System.Drawing.Size(212, 94);
+            this.buttonPrenota.Size = new System.Drawing.Size(238, 118);
             this.buttonPrenota.TabIndex = 5;
             this.buttonPrenota.Text = "Prenota!";
             this.buttonPrenota.UseVisualStyleBackColor = true;
@@ -105,9 +105,9 @@
             // 
             this.labelGiorno.AutoSize = true;
             this.labelGiorno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGiorno.Location = new System.Drawing.Point(58, 127);
+            this.labelGiorno.Location = new System.Drawing.Point(65, 159);
             this.labelGiorno.Name = "labelGiorno";
-            this.labelGiorno.Size = new System.Drawing.Size(70, 25);
+            this.labelGiorno.Size = new System.Drawing.Size(86, 29);
             this.labelGiorno.TabIndex = 4;
             this.labelGiorno.Text = "Giorno";
             // 
@@ -115,9 +115,9 @@
             // 
             this.labelTurno.AutoSize = true;
             this.labelTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTurno.Location = new System.Drawing.Point(58, 177);
+            this.labelTurno.Location = new System.Drawing.Point(65, 221);
             this.labelTurno.Name = "labelTurno";
-            this.labelTurno.Size = new System.Drawing.Size(66, 25);
+            this.labelTurno.Size = new System.Drawing.Size(81, 29);
             this.labelTurno.TabIndex = 5;
             this.labelTurno.Text = "Orario";
             // 
@@ -125,9 +125,9 @@
             // 
             this.labelPax.AutoSize = true;
             this.labelPax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPax.Location = new System.Drawing.Point(58, 230);
+            this.labelPax.Location = new System.Drawing.Point(65, 288);
             this.labelPax.Name = "labelPax";
-            this.labelPax.Size = new System.Drawing.Size(55, 25);
+            this.labelPax.Size = new System.Drawing.Size(67, 29);
             this.labelPax.TabIndex = 6;
             this.labelPax.Text = "Posti";
             // 
@@ -135,48 +135,48 @@
             // 
             this.labelNote.AutoSize = true;
             this.labelNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNote.Location = new System.Drawing.Point(58, 283);
+            this.labelNote.Location = new System.Drawing.Point(65, 354);
             this.labelNote.Name = "labelNote";
-            this.labelNote.Size = new System.Drawing.Size(53, 25);
+            this.labelNote.Size = new System.Drawing.Size(65, 29);
             this.labelNote.TabIndex = 7;
             this.labelNote.Text = "Note";
             // 
             // textBoxPax
             // 
             this.textBoxPax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPax.Location = new System.Drawing.Point(168, 230);
+            this.textBoxPax.Location = new System.Drawing.Point(189, 288);
             this.textBoxPax.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPax.Name = "textBoxPax";
-            this.textBoxPax.Size = new System.Drawing.Size(107, 30);
+            this.textBoxPax.Size = new System.Drawing.Size(120, 35);
             this.textBoxPax.TabIndex = 3;
             // 
             // textBoxNote
             // 
             this.textBoxNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNote.Location = new System.Drawing.Point(168, 283);
+            this.textBoxNote.Location = new System.Drawing.Point(189, 354);
             this.textBoxNote.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNote.Multiline = true;
             this.textBoxNote.Name = "textBoxNote";
-            this.textBoxNote.Size = new System.Drawing.Size(340, 99);
+            this.textBoxNote.Size = new System.Drawing.Size(382, 123);
             this.textBoxNote.TabIndex = 4;
             // 
             // labelPrenota
             // 
             this.labelPrenota.AutoSize = true;
-            this.labelPrenota.Font = new System.Drawing.Font("Times New Roman", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrenota.Location = new System.Drawing.Point(52, 25);
+            this.labelPrenota.Font = new System.Drawing.Font("Arial Rounded MT Bold", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrenota.Location = new System.Drawing.Point(359, 44);
             this.labelPrenota.Name = "labelPrenota";
-            this.labelPrenota.Size = new System.Drawing.Size(297, 57);
+            this.labelPrenota.Size = new System.Drawing.Size(416, 70);
             this.labelPrenota.TabIndex = 10;
             this.labelPrenota.Text = "Prenotazione";
             // 
             // btnMy
             // 
             this.btnMy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMy.Location = new System.Drawing.Point(294, 409);
+            this.btnMy.Location = new System.Drawing.Point(837, 354);
             this.btnMy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMy.Name = "btnMy";
-            this.btnMy.Size = new System.Drawing.Size(213, 94);
+            this.btnMy.Size = new System.Drawing.Size(240, 118);
             this.btnMy.TabIndex = 6;
             this.btnMy.Text = "Le tue prenotazioni";
             this.btnMy.UseVisualStyleBackColor = true;
@@ -193,10 +193,10 @@
             // 
             // FormPrenota
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Thistle;
-            this.ClientSize = new System.Drawing.Size(1026, 646);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1154, 606);
             this.Controls.Add(this.btnMy);
             this.Controls.Add(this.labelPrenota);
             this.Controls.Add(this.textBoxNote);
@@ -208,8 +208,11 @@
             this.Controls.Add(this.buttonPrenota);
             this.Controls.Add(this.comboBoxTurno);
             this.Controls.Add(this.dateTimePickerGiorno);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormPrenota";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prenotazioni";

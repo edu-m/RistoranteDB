@@ -64,7 +64,6 @@ namespace Ristorante
 
         private void btnMy_Click(object sender, EventArgs e)
         {
-            // da fare
             FormMy formMy = new FormMy();
             formMy.ShowDialog();
         }

@@ -4,7 +4,7 @@ create PROCEDURE PR_ELIMINA_PRENOTAZIONE
 AS
 BEGIN
 	delete from Prenotazioni where ID = @Id;
-	set @message = 'Prenotazione cancellata. Buona dieta :)';
+	set @message = 'Prenotazione cancellata.';
 END
 GO
 

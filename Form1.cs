@@ -96,7 +96,8 @@ namespace Ristorante
                 cmd.Connection = conn;
 
                 cmd.Parameters.AddWithValue("@email", this.textBoxEmail.Text.Trim());
-                cmd.Parameters.AddWithValue("@pwd", GetSha1(this.textBoxPwd.Text.Trim()));
+                cmd.Parameters.AddWithValue("@pwd", GetSha1(this.textBoxPwd.Text.Trim())); //USARE QUESTO: con hash
+                //cmd.Parameters.AddWithValue("@pwd", this.textBoxPwd.Text.Trim()); //SOLO TEST: senza hash !!!
                 cmd.Parameters.AddWithValue("@nome", this.textBoxNome.Text.Trim());
                 cmd.Parameters.AddWithValue("@telefono", this.textBoxTel.Text.Trim());
                 cmd.Parameters.Add("@message", SqlDbType.VarChar, 100);

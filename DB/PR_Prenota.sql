@@ -1,4 +1,4 @@
-alter PROCEDURE PR_PRENOTA
+create PROCEDURE PR_PRENOTA
 	  @IdCliente	INTEGER
 	, @giorno 		DATE
     , @turno		VARCHAR(3)
@@ -49,12 +49,10 @@ GO
 -- =====================================================
 -- Test
 declare @message varchar(100);
-EXECUTE dbo.PR_PRENOTA 1, '20221002','P1', 4, 'abbiamo fame', @message output;
+EXECUTE dbo.PR_PRENOTA 1, '20220930','P1', 4, 'abbiamo fame', @message output;
 select @message as MESSAGGIO;
 
-select cast(GETDATE() as date)
-
 select * from Prenotazioni;
-delete from Prenotazioni where ID = 1;
+--delete from Prenotazioni where ID = 1;
 
 -- =====================================================

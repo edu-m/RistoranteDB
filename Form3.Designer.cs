@@ -44,6 +44,10 @@
             this.prenotazioniTableAdapter = new Ristorante.RistoranteDataSetTableAdapters.PrenotazioniTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.prenotazClienteDataTableTableAdapter = new Ristorante.RistoranteDataSetTableAdapters.PrenotazClienteDataTableTableAdapter();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prenotazClienteDataTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ristoranteDataSet)).BeginInit();
@@ -84,8 +88,7 @@
             this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
             this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.Visible = false;
-            this.iDDataGridViewTextBoxColumn.Width = 49;
+            this.iDDataGridViewTextBoxColumn.Width = 62;
             // 
             // Giorno
             // 
@@ -131,7 +134,7 @@
             this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
             this.idClienteDataGridViewTextBoxColumn.ReadOnly = true;
             this.idClienteDataGridViewTextBoxColumn.Visible = false;
-            this.idClienteDataGridViewTextBoxColumn.Width = 88;
+            this.idClienteDataGridViewTextBoxColumn.Width = 108;
             // 
             // prenotazClienteDataTableBindingSource
             // 
@@ -175,12 +178,51 @@
             // 
             this.prenotazClienteDataTableTableAdapter.ClearBeforeFill = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(92, 477);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(510, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Per cancellare una prenotazione, inserire il suo ID e premere \"Cancella\"";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(422, 559);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(147, 49);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Cancella";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 26);
+            this.textBox1.TabIndex = 5;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(199, 570);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(131, 26);
+            this.textBox2.TabIndex = 6;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
             // FormMy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(714, 513);
+            this.ClientSize = new System.Drawing.Size(714, 674);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.dataGridView1);
@@ -218,5 +260,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Posti;
         private System.Windows.Forms.DataGridViewTextBoxColumn Note;
         private System.Windows.Forms.DataGridViewTextBoxColumn idClienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

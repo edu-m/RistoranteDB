@@ -37,6 +37,12 @@ create table Config
 	, PRIMARY KEY (chiave, valore, data_inizio) 
 );
 
+create table Messaggi
+(	  msg_key 		VARCHAR(50)		PRIMARY KEY
+	, msg_text		VARCHAR(100)
+);
+
+
 
 -- Dati di Configurazione
 
@@ -50,15 +56,24 @@ insert into Turni values ('C2', 'Cena 21.00 - 22.30');
 
 insert into Clienti values ('0', 'admin@cucinasana.com', 'chef', 'Admin', null);
 
+insert into Messaggi values ('DATA_KO',			'Inserire una data valida.');
+insert into Messaggi values ('CHIUSO',			'Nel giorno scelto siamo chiusi.');
+insert into Messaggi values ('POSTI_KO',		'Il numero di posti richiesti supera quelli disponibili nel giorno scelto.');
+insert into Messaggi values ('PRENOT_OK',		'Prenotazione effettuata!');
+insert into Messaggi values ('PRENOT_NOTFOUND', 'Prenotazione non trovata');
+insert into Messaggi values ('PRENOT_DELETED',	'Prenotazione cancellata.');
+insert into Messaggi values ('USER_EXISTS',		'Utente già registrato con questo indirizzo email');
+insert into Messaggi values ('USER_CREATED',	'Utente creato.');
+
+
 
 -- Svuotamento tabelle
 
 --drop table Prenotazioni;
 --drop Table Clienti;
-truncate table Prenotazioni;
-truncate table Clienti;
+--truncate table Prenotazioni;
+--truncate table Clienti;
 --ALTER SEQUENCE SeqPrenotazioni RESTART;
 --ALTER SEQUENCE SeqClienti RESTART;
 
 -- =================================================================
-

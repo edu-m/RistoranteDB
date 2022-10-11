@@ -1259,14 +1259,14 @@ namespace Ristorante {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PrenotazioniRow AddPrenotazioniRow(int ID, System.DateTime giorno, TurniRow parentTurniRowByFK__Prenotazi__turno__3E52440B, ClientiRow parentClientiRowByFK__Prenotazi__IdCli__3F466844, int pax, string note) {
+            public PrenotazioniRow AddPrenotazioniRow(int ID, System.DateTime giorno, TurniRow parentTurniRowByFK__Prenotazi__turno__3E52440B, ClientiRow parentClientiRowByFK__Prenotazi__IdCli__3F466844, int seats, string note) {
                 PrenotazioniRow rowPrenotazioniRow = ((PrenotazioniRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
                         giorno,
                         null,
                         null,
-                        pax,
+                        seats,
                         note};
                 if ((parentTurniRowByFK__Prenotazi__turno__3E52440B != null)) {
                     columnValuesArray[2] = parentTurniRowByFK__Prenotazi__turno__3E52440B[0];
@@ -1307,7 +1307,7 @@ namespace Ristorante {
                 this.columngiorno = base.Columns["giorno"];
                 this.columnturno = base.Columns["turno"];
                 this.columnIdCliente = base.Columns["IdCliente"];
-                this.columnpax = base.Columns["pax"];
+                this.columnpax = base.Columns["seats"];
                 this.columnnote = base.Columns["note"];
             }
             
@@ -1322,7 +1322,10 @@ namespace Ristorante {
                 base.Columns.Add(this.columnturno);
                 this.columnIdCliente = new global::System.Data.DataColumn("IdCliente", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIdCliente);
-                this.columnpax = new global::System.Data.DataColumn("pax", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnpax = new global::System.Data.DataColumn("seats", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnpax.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "paxColumn");
+                this.columnpax.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnpax");
+                this.columnpax.ExtendedProperties.Add("Generator_UserColumnName", "seats");
                 base.Columns.Add(this.columnpax);
                 this.columnnote = new global::System.Data.DataColumn("note", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnote);
@@ -1869,13 +1872,13 @@ namespace Ristorante {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ViewPrenotazioniRow AddViewPrenotazioniRow(int ID, System.DateTime giorno, int IdCliente, int pax, string note, string valore) {
+            public ViewPrenotazioniRow AddViewPrenotazioniRow(int ID, System.DateTime giorno, int IdCliente, int seats, string note, string valore) {
                 ViewPrenotazioniRow rowViewPrenotazioniRow = ((ViewPrenotazioniRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
                         giorno,
                         IdCliente,
-                        pax,
+                        seats,
                         note,
                         valore};
                 rowViewPrenotazioniRow.ItemArray = columnValuesArray;
@@ -1910,7 +1913,7 @@ namespace Ristorante {
                 this.columnID = base.Columns["ID"];
                 this.columngiorno = base.Columns["giorno"];
                 this.columnIdCliente = base.Columns["IdCliente"];
-                this.columnpax = base.Columns["pax"];
+                this.columnpax = base.Columns["seats"];
                 this.columnnote = base.Columns["note"];
                 this.columnvalore = base.Columns["valore"];
             }
@@ -1924,7 +1927,10 @@ namespace Ristorante {
                 base.Columns.Add(this.columngiorno);
                 this.columnIdCliente = new global::System.Data.DataColumn("IdCliente", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIdCliente);
-                this.columnpax = new global::System.Data.DataColumn("pax", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnpax = new global::System.Data.DataColumn("seats", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnpax.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "paxColumn");
+                this.columnpax.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnpax");
+                this.columnpax.ExtendedProperties.Add("Generator_UserColumnName", "seats");
                 base.Columns.Add(this.columnpax);
                 this.columnnote = new global::System.Data.DataColumn("note", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnote);
@@ -2518,14 +2524,14 @@ namespace Ristorante {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PR_PRENOTARow AddPR_PRENOTARow(int ID, System.DateTime giorno, string turno, int IdCliente, int pax, string note) {
+            public PR_PRENOTARow AddPR_PRENOTARow(int ID, System.DateTime giorno, string turno, int IdCliente, int seats, string note) {
                 PR_PRENOTARow rowPR_PRENOTARow = ((PR_PRENOTARow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
                         giorno,
                         turno,
                         IdCliente,
-                        pax,
+                        seats,
                         note};
                 rowPR_PRENOTARow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPR_PRENOTARow);
@@ -2560,7 +2566,7 @@ namespace Ristorante {
                 this.columngiorno = base.Columns["giorno"];
                 this.columnturno = base.Columns["turno"];
                 this.columnIdCliente = base.Columns["IdCliente"];
-                this.columnpax = base.Columns["pax"];
+                this.columnpax = base.Columns["seats"];
                 this.columnnote = base.Columns["note"];
             }
             
@@ -2575,7 +2581,10 @@ namespace Ristorante {
                 base.Columns.Add(this.columnturno);
                 this.columnIdCliente = new global::System.Data.DataColumn("IdCliente", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIdCliente);
-                this.columnpax = new global::System.Data.DataColumn("pax", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnpax = new global::System.Data.DataColumn("seats", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnpax.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "paxColumn");
+                this.columnpax.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnpax");
+                this.columnpax.ExtendedProperties.Add("Generator_UserColumnName", "seats");
                 base.Columns.Add(this.columnpax);
                 this.columnnote = new global::System.Data.DataColumn("note", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnote);
@@ -2994,13 +3003,13 @@ namespace Ristorante {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int pax {
+            public int seats {
                 get {
                     try {
                         return ((int)(this[this.tablePrenotazioni.paxColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'pax\' nella tabella \'Prenotazioni\' è DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'seats\' nella tabella \'Prenotazioni\' è DBNull.", e);
                     }
                 }
                 set {
@@ -3084,13 +3093,13 @@ namespace Ristorante {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IspaxNull() {
+            public bool IsseatsNull() {
                 return this.IsNull(this.tablePrenotazioni.paxColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetpaxNull() {
+            public void SetseatsNull() {
                 this[this.tablePrenotazioni.paxColumn] = global::System.Convert.DBNull;
             }
             
@@ -3231,13 +3240,13 @@ namespace Ristorante {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int pax {
+            public int seats {
                 get {
                     try {
                         return ((int)(this[this.tableViewPrenotazioni.paxColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'pax\' nella tabella \'ViewPrenotazioni\' è DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'seats\' nella tabella \'ViewPrenotazioni\' è DBNull.", e);
                     }
                 }
                 set {
@@ -3303,13 +3312,13 @@ namespace Ristorante {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IspaxNull() {
+            public bool IsseatsNull() {
                 return this.IsNull(this.tableViewPrenotazioni.paxColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetpaxNull() {
+            public void SetseatsNull() {
                 this[this.tableViewPrenotazioni.paxColumn] = global::System.Convert.DBNull;
             }
             
@@ -3534,13 +3543,13 @@ namespace Ristorante {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int pax {
+            public int seats {
                 get {
                     try {
                         return ((int)(this[this.tablePR_PRENOTA.paxColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'pax\' nella tabella \'PR_PRENOTA\' è DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Il valore della colonna \'seats\' nella tabella \'PR_PRENOTA\' è DBNull.", e);
                     }
                 }
                 set {
@@ -3602,13 +3611,13 @@ namespace Ristorante {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IspaxNull() {
+            public bool IsseatsNull() {
                 return this.IsNull(this.tablePR_PRENOTA.paxColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetpaxNull() {
+            public void SetseatsNull() {
                 this[this.tablePR_PRENOTA.paxColumn] = global::System.Convert.DBNull;
             }
             
@@ -4800,12 +4809,12 @@ SELECT chiave, data_inizio, data_fine, valore FROM Config WHERE (chiave = @chiav
             tableMapping.ColumnMappings.Add("giorno", "giorno");
             tableMapping.ColumnMappings.Add("turno", "turno");
             tableMapping.ColumnMappings.Add("IdCliente", "IdCliente");
-            tableMapping.ColumnMappings.Add("pax", "pax");
+            tableMapping.ColumnMappings.Add("seats", "seats");
             tableMapping.ColumnMappings.Add("note", "note");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Prenotazioni] WHERE (([ID] = @Original_ID) AND ((@IsNull_giorno = 1 AND [giorno] IS NULL) OR ([giorno] = @Original_giorno)) AND ((@IsNull_turno = 1 AND [turno] IS NULL) OR ([turno] = @Original_turno)) AND ((@IsNull_IdCliente = 1 AND [IdCliente] IS NULL) OR ([IdCliente] = @Original_IdCliente)) AND ((@IsNull_pax = 1 AND [pax] IS NULL) OR ([pax] = @Original_pax)) AND ((@IsNull_note = 1 AND [note] IS NULL) OR ([note] = @Original_note)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Prenotazioni] WHERE (([ID] = @Original_ID) AND ((@IsNull_giorno = 1 AND [giorno] IS NULL) OR ([giorno] = @Original_giorno)) AND ((@IsNull_turno = 1 AND [turno] IS NULL) OR ([turno] = @Original_turno)) AND ((@IsNull_IdCliente = 1 AND [IdCliente] IS NULL) OR ([IdCliente] = @Original_IdCliente)) AND ((@IsNull_pax = 1 AND [seats] IS NULL) OR ([seats] = @Original_pax)) AND ((@IsNull_note = 1 AND [note] IS NULL) OR ([note] = @Original_note)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_giorno", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "giorno", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -4814,32 +4823,32 @@ SELECT chiave, data_inizio, data_fine, valore FROM Config WHERE (chiave = @chiav
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_turno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "turno", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IdCliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdCliente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdCliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdCliente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_pax", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pax", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pax", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pax", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_pax", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "seats", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pax", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "seats", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_note", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "note", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_note", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "note", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Prenotazioni] ([ID], [giorno], [turno], [IdCliente], [pax], [n" +
-                "ote]) VALUES (@ID, @giorno, @turno, @IdCliente, @pax, @note);\r\nSELECT ID, giorno" +
-                ", turno, IdCliente, pax, note FROM Prenotazioni WHERE (ID = @ID)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Prenotazioni] ([ID], [giorno], [turno], [IdCliente], [seats], " +
+                "[note]) VALUES (@ID, @giorno, @turno, @IdCliente, @seats, @note);\r\nSELECT ID, gi" +
+                "orno, turno, IdCliente, seats, note FROM Prenotazioni WHERE (ID = @ID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@giorno", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "giorno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "turno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdCliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdCliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pax", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pax", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "seats", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@note", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "note", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Prenotazioni] SET [ID] = @ID, [giorno] = @giorno, [turno] = @turno, [IdCliente] = @IdCliente, [pax] = @pax, [note] = @note WHERE (([ID] = @Original_ID) AND ((@IsNull_giorno = 1 AND [giorno] IS NULL) OR ([giorno] = @Original_giorno)) AND ((@IsNull_turno = 1 AND [turno] IS NULL) OR ([turno] = @Original_turno)) AND ((@IsNull_IdCliente = 1 AND [IdCliente] IS NULL) OR ([IdCliente] = @Original_IdCliente)) AND ((@IsNull_pax = 1 AND [pax] IS NULL) OR ([pax] = @Original_pax)) AND ((@IsNull_note = 1 AND [note] IS NULL) OR ([note] = @Original_note)));
-SELECT ID, giorno, turno, IdCliente, pax, note FROM Prenotazioni WHERE (ID = @ID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Prenotazioni] SET [ID] = @ID, [giorno] = @giorno, [turno] = @turno, [IdCliente] = @IdCliente, [seats] = @seats, [note] = @note WHERE (([ID] = @Original_ID) AND ((@IsNull_giorno = 1 AND [giorno] IS NULL) OR ([giorno] = @Original_giorno)) AND ((@IsNull_turno = 1 AND [turno] IS NULL) OR ([turno] = @Original_turno)) AND ((@IsNull_IdCliente = 1 AND [IdCliente] IS NULL) OR ([IdCliente] = @Original_IdCliente)) AND ((@IsNull_pax = 1 AND [seats] IS NULL) OR ([seats] = @Original_pax)) AND ((@IsNull_note = 1 AND [note] IS NULL) OR ([note] = @Original_note)));
+SELECT ID, giorno, turno, IdCliente, seats, note FROM Prenotazioni WHERE (ID = @ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@giorno", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "giorno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "turno", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdCliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdCliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pax", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pax", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@seats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "seats", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@note", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "note", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_giorno", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "giorno", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -4848,8 +4857,8 @@ SELECT ID, giorno, turno, IdCliente, pax, note FROM Prenotazioni WHERE (ID = @ID
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_turno", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "turno", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IdCliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdCliente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdCliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdCliente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_pax", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pax", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pax", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pax", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_pax", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "seats", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pax", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "seats", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_note", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "note", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_note", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "note", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
@@ -4867,7 +4876,7 @@ SELECT ID, giorno, turno, IdCliente, pax, note FROM Prenotazioni WHERE (ID = @ID
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, giorno, turno, IdCliente, pax, note FROM dbo.Prenotazioni";
+            this._commandCollection[0].CommandText = "SELECT ID, giorno, turno, IdCliente, seats, note FROM dbo.Prenotazioni";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4990,7 +4999,7 @@ SELECT ID, giorno, turno, IdCliente, pax, note FROM Prenotazioni WHERE (ID = @ID
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ID, global::System.Nullable<global::System.DateTime> giorno, string turno, global::System.Nullable<int> IdCliente, global::System.Nullable<int> pax, string note) {
+        public virtual int Insert(int ID, global::System.Nullable<global::System.DateTime> giorno, string turno, global::System.Nullable<int> IdCliente, global::System.Nullable<int> seats, string note) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ID));
             if ((giorno.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(giorno.Value));
@@ -5010,8 +5019,8 @@ SELECT ID, giorno, turno, IdCliente, pax, note FROM Prenotazioni WHERE (ID = @ID
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((pax.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(pax.Value));
+            if ((seats.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(seats.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
@@ -5042,7 +5051,7 @@ SELECT ID, giorno, turno, IdCliente, pax, note FROM Prenotazioni WHERE (ID = @ID
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ID, global::System.Nullable<global::System.DateTime> giorno, string turno, global::System.Nullable<int> IdCliente, global::System.Nullable<int> pax, string note, int Original_ID, global::System.Nullable<global::System.DateTime> Original_giorno, string Original_turno, global::System.Nullable<int> Original_IdCliente, global::System.Nullable<int> Original_pax, string Original_note) {
+        public virtual int Update(int ID, global::System.Nullable<global::System.DateTime> giorno, string turno, global::System.Nullable<int> IdCliente, global::System.Nullable<int> seats, string note, int Original_ID, global::System.Nullable<global::System.DateTime> Original_giorno, string Original_turno, global::System.Nullable<int> Original_IdCliente, global::System.Nullable<int> Original_pax, string Original_note) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ID));
             if ((giorno.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(giorno.Value));
@@ -5062,8 +5071,8 @@ SELECT ID, giorno, turno, IdCliente, pax, note FROM Prenotazioni WHERE (ID = @ID
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((pax.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(pax.Value));
+            if ((seats.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(seats.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
@@ -5135,8 +5144,8 @@ SELECT ID, giorno, turno, IdCliente, pax, note FROM Prenotazioni WHERE (ID = @ID
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> giorno, string turno, global::System.Nullable<int> IdCliente, global::System.Nullable<int> pax, string note, int Original_ID, global::System.Nullable<global::System.DateTime> Original_giorno, string Original_turno, global::System.Nullable<int> Original_IdCliente, global::System.Nullable<int> Original_pax, string Original_note) {
-            return this.Update(Original_ID, giorno, turno, IdCliente, pax, note, Original_ID, Original_giorno, Original_turno, Original_IdCliente, Original_pax, Original_note);
+        public virtual int Update(global::System.Nullable<global::System.DateTime> giorno, string turno, global::System.Nullable<int> IdCliente, global::System.Nullable<int> seats, string note, int Original_ID, global::System.Nullable<global::System.DateTime> Original_giorno, string Original_turno, global::System.Nullable<int> Original_IdCliente, global::System.Nullable<int> Original_pax, string Original_note) {
+            return this.Update(Original_ID, giorno, turno, IdCliente, seats, note, Original_ID, Original_giorno, Original_turno, Original_IdCliente, Original_pax, Original_note);
         }
     }
     
@@ -5610,7 +5619,7 @@ SELECT ID, giorno, turno, IdCliente, pax, note FROM Prenotazioni WHERE (ID = @ID
             tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("giorno", "giorno");
             tableMapping.ColumnMappings.Add("IdCliente", "IdCliente");
-            tableMapping.ColumnMappings.Add("pax", "pax");
+            tableMapping.ColumnMappings.Add("seats", "seats");
             tableMapping.ColumnMappings.Add("note", "note");
             tableMapping.ColumnMappings.Add("valore", "valore");
             this._adapter.TableMappings.Add(tableMapping);
@@ -5629,7 +5638,7 @@ SELECT ID, giorno, turno, IdCliente, pax, note FROM Prenotazioni WHERE (ID = @ID
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, giorno, IdCliente, pax, note, valore FROM dbo.ViewPrenotazioni";
+            this._commandCollection[0].CommandText = "SELECT ID, giorno, IdCliente, seats, note, valore FROM dbo.ViewPrenotazioni";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6034,7 +6043,7 @@ SELECT ID, giorno, turno, IdCliente, pax, note FROM Prenotazioni WHERE (ID = @ID
             tableMapping.ColumnMappings.Add("giorno", "giorno");
             tableMapping.ColumnMappings.Add("turno", "turno");
             tableMapping.ColumnMappings.Add("IdCliente", "IdCliente");
-            tableMapping.ColumnMappings.Add("pax", "pax");
+            tableMapping.ColumnMappings.Add("seats", "seats");
             tableMapping.ColumnMappings.Add("note", "note");
             this._adapter.TableMappings.Add(tableMapping);
         }
@@ -6058,7 +6067,7 @@ SELECT ID, giorno, turno, IdCliente, pax, note FROM Prenotazioni WHERE (ID = @ID
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdCliente", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@giorno", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@turno", global::System.Data.SqlDbType.VarChar, 3, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pax", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@seats", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@note", global::System.Data.SqlDbType.VarChar, 200, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@message", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.InputOutput, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -6067,7 +6076,7 @@ SELECT ID, giorno, turno, IdCliente, pax, note FROM Prenotazioni WHERE (ID = @ID
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(RistDataSet.PR_PRENOTADataTable dataTable, global::System.Nullable<int> IdCliente, global::System.Nullable<global::System.DateTime> giorno, string turno, global::System.Nullable<int> pax, string note, ref string message) {
+        public virtual int Fill(RistDataSet.PR_PRENOTADataTable dataTable, global::System.Nullable<int> IdCliente, global::System.Nullable<global::System.DateTime> giorno, string turno, global::System.Nullable<int> seats, string note, ref string message) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((IdCliente.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(IdCliente.Value));
@@ -6087,8 +6096,8 @@ SELECT ID, giorno, turno, IdCliente, pax, note FROM Prenotazioni WHERE (ID = @ID
             else {
                 this.Adapter.SelectCommand.Parameters[3].Value = ((string)(turno));
             }
-            if ((pax.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(pax.Value));
+            if ((seats.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(seats.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
@@ -6123,7 +6132,7 @@ SELECT ID, giorno, turno, IdCliente, pax, note FROM Prenotazioni WHERE (ID = @ID
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual RistDataSet.PR_PRENOTADataTable GetData(global::System.Nullable<int> IdCliente, global::System.Nullable<global::System.DateTime> giorno, string turno, global::System.Nullable<int> pax, string note, ref string message) {
+        public virtual RistDataSet.PR_PRENOTADataTable GetData(global::System.Nullable<int> IdCliente, global::System.Nullable<global::System.DateTime> giorno, string turno, global::System.Nullable<int> seats, string note, ref string message) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((IdCliente.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(IdCliente.Value));
@@ -6143,8 +6152,8 @@ SELECT ID, giorno, turno, IdCliente, pax, note FROM Prenotazioni WHERE (ID = @ID
             else {
                 this.Adapter.SelectCommand.Parameters[3].Value = ((string)(turno));
             }
-            if ((pax.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(pax.Value));
+            if ((seats.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(seats.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;

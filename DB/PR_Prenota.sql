@@ -2,7 +2,7 @@ create PROCEDURE PR_PRENOTA
 	  @IdCliente	INTEGER
 	, @giorno 		DATE
     , @turno		VARCHAR(3)
-	, @pax			INTEGER
+	, @seats	    INTEGER
 	, @note			VARCHAR(200)
 	, @message		VARCHAR(100) OUTPUT
 AS
@@ -31,17 +31,17 @@ BEGIN
 			select * from Prenotazioni P where giorno = @giorno and turno=@turno;
 			if @@ROWCOUNT > 0
 			set @postiPrenotati =			
-				(SELECT sum(pax) from Prenotazioni P where giorno = @giorno and turno=@turno);
+				(SELECT sum(seats) from Prenotazioni P where giorno = @giorno and turno=@turno);
 				
-			if (@pax <= @postiTotali - @postiPrenotati) 
+			if (@seats <= @postiTotali - @postiPrenotati) 
 			BEGIN
 				insert into Prenotazioni
-				values (NEXT VALUE for SeqPrenotazioni, @giorno, @turno, @IdCliente, @pax, @note);
+				values (NEXT VALUE for SeqPrenotazioni, @giorno, @turno, @IdCliente, @seats, @note);
 
 				set @message = 'Prenotazione effettuata! A presto!';
 			end
 			else
-				set @message = 'Il nr di posti richiesti supera quelli disponibili nel giorno scelto.';
+				set @message = 'Il numero di posti richiesti supera quelli disponibili nel giorno scelto.';
 	End
 END
 GO

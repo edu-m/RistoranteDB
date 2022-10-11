@@ -47,7 +47,7 @@ namespace Ristorante
                 cmd.Parameters.AddWithValue("@IdCliente", Utility.loggedUser);
                 cmd.Parameters.AddWithValue("@giorno", this.dateTimePickerGiorno.Value.ToString("yyyyMMdd"));
                 cmd.Parameters.AddWithValue("@turno", this.comboBoxTurno.SelectedValue.ToString());
-                cmd.Parameters.AddWithValue("@pax", this.textBoxPax.Text);
+                cmd.Parameters.AddWithValue("@seats", this.textBoxPax.Text);
                 cmd.Parameters.AddWithValue("@note", this.textBoxNote.Text);
                 cmd.Parameters.Add("@message", SqlDbType.VarChar, 100);
                 cmd.Parameters["@message"].Direction = ParameterDirection.Output;
@@ -66,6 +66,11 @@ namespace Ristorante
         {
             FormMy formMy = new FormMy();
             formMy.ShowDialog();
+        }
+
+        private void comboBoxTurno_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

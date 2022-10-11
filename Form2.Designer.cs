@@ -55,10 +55,10 @@
             // dateTimePickerGiorno
             // 
             this.dateTimePickerGiorno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerGiorno.Location = new System.Drawing.Point(189, 159);
-            this.dateTimePickerGiorno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePickerGiorno.Location = new System.Drawing.Point(126, 103);
+            this.dateTimePickerGiorno.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.dateTimePickerGiorno.Name = "dateTimePickerGiorno";
-            this.dateTimePickerGiorno.Size = new System.Drawing.Size(382, 35);
+            this.dateTimePickerGiorno.Size = new System.Drawing.Size(256, 26);
             this.dateTimePickerGiorno.TabIndex = 1;
             // 
             // comboBoxTurno
@@ -67,12 +67,13 @@
             this.comboBoxTurno.DisplayMember = "valore";
             this.comboBoxTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTurno.FormattingEnabled = true;
-            this.comboBoxTurno.Location = new System.Drawing.Point(189, 221);
-            this.comboBoxTurno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxTurno.Location = new System.Drawing.Point(126, 144);
+            this.comboBoxTurno.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.comboBoxTurno.Name = "comboBoxTurno";
-            this.comboBoxTurno.Size = new System.Drawing.Size(382, 37);
+            this.comboBoxTurno.Size = new System.Drawing.Size(256, 28);
             this.comboBoxTurno.TabIndex = 2;
             this.comboBoxTurno.ValueMember = "ID";
+            this.comboBoxTurno.SelectedIndexChanged += new System.EventHandler(this.comboBoxTurno_SelectedIndexChanged);
             // 
             // turniBindingSource
             // 
@@ -92,10 +93,10 @@
             // buttonPrenota
             // 
             this.buttonPrenota.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrenota.Location = new System.Drawing.Point(839, 159);
-            this.buttonPrenota.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonPrenota.Location = new System.Drawing.Point(559, 103);
+            this.buttonPrenota.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.buttonPrenota.Name = "buttonPrenota";
-            this.buttonPrenota.Size = new System.Drawing.Size(238, 118);
+            this.buttonPrenota.Size = new System.Drawing.Size(159, 77);
             this.buttonPrenota.TabIndex = 5;
             this.buttonPrenota.Text = "Prenota!";
             this.buttonPrenota.UseVisualStyleBackColor = true;
@@ -105,9 +106,10 @@
             // 
             this.labelGiorno.AutoSize = true;
             this.labelGiorno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGiorno.Location = new System.Drawing.Point(65, 159);
+            this.labelGiorno.Location = new System.Drawing.Point(43, 103);
+            this.labelGiorno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelGiorno.Name = "labelGiorno";
-            this.labelGiorno.Size = new System.Drawing.Size(86, 29);
+            this.labelGiorno.Size = new System.Drawing.Size(57, 20);
             this.labelGiorno.TabIndex = 4;
             this.labelGiorno.Text = "Giorno";
             // 
@@ -115,9 +117,10 @@
             // 
             this.labelTurno.AutoSize = true;
             this.labelTurno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTurno.Location = new System.Drawing.Point(65, 221);
+            this.labelTurno.Location = new System.Drawing.Point(43, 144);
+            this.labelTurno.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTurno.Name = "labelTurno";
-            this.labelTurno.Size = new System.Drawing.Size(81, 29);
+            this.labelTurno.Size = new System.Drawing.Size(52, 20);
             this.labelTurno.TabIndex = 5;
             this.labelTurno.Text = "Orario";
             // 
@@ -125,9 +128,10 @@
             // 
             this.labelPax.AutoSize = true;
             this.labelPax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPax.Location = new System.Drawing.Point(65, 288);
+            this.labelPax.Location = new System.Drawing.Point(43, 187);
+            this.labelPax.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPax.Name = "labelPax";
-            this.labelPax.Size = new System.Drawing.Size(67, 29);
+            this.labelPax.Size = new System.Drawing.Size(44, 20);
             this.labelPax.TabIndex = 6;
             this.labelPax.Text = "Posti";
             // 
@@ -135,48 +139,50 @@
             // 
             this.labelNote.AutoSize = true;
             this.labelNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNote.Location = new System.Drawing.Point(65, 354);
+            this.labelNote.Location = new System.Drawing.Point(43, 230);
+            this.labelNote.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNote.Name = "labelNote";
-            this.labelNote.Size = new System.Drawing.Size(65, 29);
+            this.labelNote.Size = new System.Drawing.Size(43, 20);
             this.labelNote.TabIndex = 7;
             this.labelNote.Text = "Note";
             // 
             // textBoxPax
             // 
             this.textBoxPax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPax.Location = new System.Drawing.Point(189, 288);
-            this.textBoxPax.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxPax.Location = new System.Drawing.Point(126, 187);
+            this.textBoxPax.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.textBoxPax.Name = "textBoxPax";
-            this.textBoxPax.Size = new System.Drawing.Size(120, 35);
+            this.textBoxPax.Size = new System.Drawing.Size(81, 26);
             this.textBoxPax.TabIndex = 3;
             // 
             // textBoxNote
             // 
             this.textBoxNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNote.Location = new System.Drawing.Point(189, 354);
-            this.textBoxNote.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxNote.Location = new System.Drawing.Point(126, 230);
+            this.textBoxNote.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.textBoxNote.Multiline = true;
             this.textBoxNote.Name = "textBoxNote";
-            this.textBoxNote.Size = new System.Drawing.Size(382, 123);
+            this.textBoxNote.Size = new System.Drawing.Size(256, 81);
             this.textBoxNote.TabIndex = 4;
             // 
             // labelPrenota
             // 
             this.labelPrenota.AutoSize = true;
             this.labelPrenota.Font = new System.Drawing.Font("Arial Rounded MT Bold", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrenota.Location = new System.Drawing.Point(359, 44);
+            this.labelPrenota.Location = new System.Drawing.Point(239, 29);
+            this.labelPrenota.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPrenota.Name = "labelPrenota";
-            this.labelPrenota.Size = new System.Drawing.Size(416, 70);
+            this.labelPrenota.Size = new System.Drawing.Size(279, 46);
             this.labelPrenota.TabIndex = 10;
             this.labelPrenota.Text = "Prenotazione";
             // 
             // btnMy
             // 
             this.btnMy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMy.Location = new System.Drawing.Point(837, 354);
-            this.btnMy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMy.Location = new System.Drawing.Point(558, 230);
+            this.btnMy.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnMy.Name = "btnMy";
-            this.btnMy.Size = new System.Drawing.Size(240, 118);
+            this.btnMy.Size = new System.Drawing.Size(160, 77);
             this.btnMy.TabIndex = 6;
             this.btnMy.Text = "Le tue prenotazioni";
             this.btnMy.UseVisualStyleBackColor = true;
@@ -193,10 +199,10 @@
             // 
             // FormPrenota
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1154, 606);
+            this.ClientSize = new System.Drawing.Size(769, 394);
             this.Controls.Add(this.btnMy);
             this.Controls.Add(this.labelPrenota);
             this.Controls.Add(this.textBoxNote);
@@ -210,7 +216,7 @@
             this.Controls.Add(this.dateTimePickerGiorno);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormPrenota";

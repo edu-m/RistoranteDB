@@ -4,7 +4,7 @@ create PROCEDURE PR_PRENOTAZIONI_UTENTE
 AS
 BEGIN
 	set @result = CURSOR FORWARD_ONLY STATIC FOR 
-		select ID, Giorno, Turno, Pax from Prenotazioni where IdCliente = @Id;
+		select ID, Giorno, Turno, seats from Prenotazioni where IdCliente = @Id;
 
 	open @result;
 END

@@ -11,7 +11,7 @@ create table Clienti
 (	  ID		INTEGER		PRIMARY KEY
 	, email		VARCHAR(50) NOT NULL
 	, pwd 		VARCHAR(50)
-    , nome		VARCHAR(200)
+    , nome		VARCHAR(200) 
 	, telefono	VARCHAR(20)
 );
 
@@ -25,7 +25,7 @@ create table Prenotazioni
 	, giorno 		DATE			
 	, turno 		VARCHAR(2)		FOREIGN KEY REFERENCES Turni(ID)
     , IdCliente		INTEGER			FOREIGN KEY REFERENCES Clienti(ID)
-	, pax			INTEGER
+	, seats			INTEGER
 	, note			VARCHAR(200)
 );
 
@@ -42,19 +42,18 @@ create table Messaggi
 	, msg_text		VARCHAR(100)
 );
 
-
-
 -- Dati di Configurazione
 
-insert into Config values ('Posti', '20220901', '99991231', 30);
-insert into Config values ('GiornoChiusura', '20220901', '99991231', 'domenica');
+insert into Config values ('Posti', '20220901', '99991231', 150);
+insert into Config values ('GiornoChiusura', '20220901', '99991231', 'mercoledì');
 
 insert into Turni values ('P1', 'Pranzo 12.30 - 14.00');
 insert into Turni values ('P2', 'Pranzo 14.00 - 15.30');
 insert into Turni values ('C1', 'Cena 19.30 - 21.00');
 insert into Turni values ('C2', 'Cena 21.00 - 22.30');
+insert into Turni values ('C3', 'Cena 22.30 - 23.59');
 
-insert into Clienti values ('0', 'admin@cucinasana.com', 'chef', 'Admin', null);
+--insert into Clienti values ('0', 'admin@cucinasana.com', '5B243020A372FFDFDC5507633050E668FAA674A3', 'Admin', null);
 
 insert into Messaggi values ('DATA_KO',			'Inserire una data valida.');
 insert into Messaggi values ('CHIUSO',			'Nel giorno scelto siamo chiusi.');
@@ -65,7 +64,7 @@ insert into Messaggi values ('PRENOT_DELETED',	'Prenotazione cancellata.');
 insert into Messaggi values ('USER_EXISTS',		'Utente già registrato con questo indirizzo email');
 insert into Messaggi values ('USER_CREATED',	'Utente creato.');
 
-
+--truncate table Messaggi
 
 -- Svuotamento tabelle
 
